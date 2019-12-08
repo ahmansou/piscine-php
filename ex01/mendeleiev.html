@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>Basics</title>
+		<style>
+            .line {
+                display: flex;
+            }
+            .element {
+                width: 70px;
+                height: 70px;
+                background-color: #F0F5F5;
+                font-family: Arial;
+                line-height: 0.3;
+                overflow:hidden;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            .type {
+                height: 30px;
+                line-height: 0.8;
+            }
+            .e-name {
+                font-weight: 100;
+                font-size: 33px;
+                text-align: center;
+            }
+            .e-name::first-letter {
+                text-transform: uppercase;
+            }
+            .e-type {
+                padding-top: 0px;
+                margin-top: 10px;
+                font-size: 15px;
+                text-align: center;
+            }
+            .e-weight {
+                float: right;
+                font-size: 12px;
+                margin-right: 5px;
+            }
+            .e-number {
+                position: relative;
+                font-size: 12px;
+                bottom: 15px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+            }
+            .e-empty {
+                background-color: transparent;
+            }
+            .e-yellow {
+                background-color: #FFFECA;
+            }
+            .e-orange {
+                background-color: #FFE3C5;
+            }
+            .e-pinkish {
+                background-color: #FFCFCE;
+            }
+            .e-purple {
+                background-color: #DCDBFE;
+            }
+            .e-oil {
+                background-color: #E1EDC4;
+            }
+            .e-green {
+                background-color: #D1FDC8;
+            }
+            .e-blue {
+                background-color: #C9DFFE;
+            }
+            .e-cyan {
+                background-color: #C3FBFC;
+            }
+            .e-turquoise {
+                background-color: #D6FEEF;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ptable" contenteditable="true">
+            <div class="line">
+                <div class="element"><p class="e-weight">group</p><p class="e-name">\</p><p class="e-number">period</p></div>
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element"><p class="e-name">2</p></div>
+                <div class="element"><p class="e-name">3</p></div>
+                <div class="element"><p class="e-name">4</p></div>
+                <div class="element"><p class="e-name">5</p></div>
+                <div class="element"><p class="e-name">6</p></div>
+                <div class="element"><p class="e-name">7</p></div>
+                <div class="element"><p class="e-name">8</p></div>
+                <div class="element"><p class="e-name">9</p></div>
+                <div class="element"><p class="e-name">10</p></div>
+                <div class="element"><p class="e-name">11</p></div>
+                <div class="element"><p class="e-name">12</p></div>
+                <div class="element"><p class="e-name">13</p></div>
+                <div class="element"><p class="e-name">14</p></div>
+                <div class="element"><p class="e-name">15</p></div>
+                <div class="element"><p class="e-name">16</p></div>
+                <div class="element"><p class="e-name">17</p></div>
+                <div class="element"><p class="e-name">18</p></div>
+            </div>
+            <div class="line">
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element e-yellow">
+                    <p class="e-weight">1.0080</p>
+                    <p class="e-name">H</p>
+                    <p class="e-number">1</p>
+                </div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-orange">
+                    <p class="e-weight">4.0026</p>
+                    <p class="e-name">He</p>
+                    <p class="e-number">2</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element e-pinkish">
+                    <p class="e-weight">6.9410</p>
+                    <p class="e-name">Li</p>
+                    <p class="e-number">3</p>
+                </div>
+                <div class="element e-purple">
+                    <p class="e-weight">9.01218</p>
+                    <p class="e-name">Be</p>
+                    <p class="e-number">4</p>
+                </div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-oil">
+                    <p class="e-weight">10.8110</p>
+                    <p class="e-name">B</p>
+                    <p class="e-number">5</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">12.0107</p>
+                    <p class="e-name">C</p>
+                    <p class="e-number">6</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">14.0067</p>
+                    <p class="e-name">N</p>
+                    <p class="e-number">7</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">15.9994</p>
+                    <p class="e-name">O</p>
+                    <p class="e-number">8</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">18.9984</p>
+                    <p class="e-name">F</p>
+                    <p class="e-number">9</p>
+                </div>
+                <div class="element e-orange">
+                    <p class="e-weight">20.1797</p>
+                    <p class="e-name">ne</p>
+                    <p class="e-number">9</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element e-pinkish">
+                    <p class="e-weight">22.9898</p>
+                    <p class="e-name">Na</p>
+                    <p class="e-number">11</p>
+                </div>
+                <div class="element e-purple">
+                    <p class="e-weight">14.3050</p>
+                    <p class="e-name">Mg</p>
+                    <p class="e-number">12</p>
+                </div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-green">
+                    <p class="e-weight">26.9815</p>
+                    <p class="e-name">Al</p>
+                    <p class="e-number">13</p>
+                </div>
+                <div class="element e-oil">
+                    <p class="e-weight">28.0855</p>
+                    <p class="e-name">Si</p>
+                    <p class="e-number">14</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">30.9738</p>
+                    <p class="e-name">P</p>
+                    <p class="e-number">15</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">32.0650</p>
+                    <p class="e-name">S</p>
+                    <p class="e-number">16</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">35.4530</p>
+                    <p class="e-name">Cl</p>
+                    <p class="e-number">17</p>
+                </div>
+                <div class="element e-orange">
+                    <p class="e-weight">39.9480</p>
+                    <p class="e-name">Ar</p>
+                    <p class="e-number">18</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element e-pinkish">
+                    <p class="e-weight">39.0983</p>
+                    <p class="e-name">K</p>
+                    <p class="e-number">19</p>
+                </div>
+                <div class="element e-purple">
+                    <p class="e-weight">40.0780</p>
+                    <p class="e-name">Ca</p>
+                    <p class="e-number">20</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">44.9559</p>
+                    <p class="e-name">Sc</p>
+                    <p class="e-number">21</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">47.867</p>
+                    <p class="e-name">Ti</p>
+                    <p class="e-number">22</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">50.9415</p>
+                    <p class="e-name">V</p>
+                    <p class="e-number">23</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">54.9380</p>
+                    <p class="e-name">Cr</p>
+                    <p class="e-number">24</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">54.9380</p>
+                    <p class="e-name">Mn</p>
+                    <p class="e-number">25</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">55.8450</p>
+                    <p class="e-name">Fe</p>
+                    <p class="e-number">26</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">58.9331</p>
+                    <p class="e-name">Co</p>
+                    <p class="e-number">27</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">58.6934</p>
+                    <p class="e-name">Ni</p>
+                    <p class="e-number">28</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">63.5460</p>
+                    <p class="e-name">Cu</p>
+                    <p class="e-number">29</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">65.3800</p>
+                    <p class="e-name">Zn</p>
+                    <p class="e-number">30</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">69.723</p>
+                    <p class="e-name">Ga</p>
+                    <p class="e-number">31</p>
+                </div>
+                <div class="element e-oil">
+                    <p class="e-weight">72.6400</p>
+                    <p class="e-name">Ge</p>
+                    <p class="e-number">32</p>
+                </div>
+                <div class="element e-oil">
+                    <p class="e-weight">74.9216</p>
+                    <p class="e-name">As</p>
+                    <p class="e-number">33</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">78.9600</p>
+                    <p class="e-name">se</p>
+                    <p class="e-number">34</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">79.9040</p>
+                    <p class="e-name">br</p>
+                    <p class="e-number">35</p>
+                </div>
+                <div class="element e-orange">
+                    <p class="e-weight">83.7980</p>
+                    <p class="e-name">kr</p>
+                    <p class="e-number">36</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element e-pinkish">
+                    <p class="e-weight">85.4678</p>
+                    <p class="e-name">rb</p>
+                    <p class="e-number">37</p>
+                </div>
+                <div class="element e-purple">
+                    <p class="e-weight">87.6200</p>
+                    <p class="e-name">sr</p>
+                    <p class="e-number">38</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">88.9058</p>
+                    <p class="e-name">y</p>
+                    <p class="e-number">39</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">91.2240</p>
+                    <p class="e-name">zr</p>
+                    <p class="e-number">40</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">92.9063</p>
+                    <p class="e-name">nb</p>
+                    <p class="e-number">41</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">95.9600</p>
+                    <p class="e-name">mo</p>
+                    <p class="e-number">42</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">97.9072</p>
+                    <p class="e-name">tc</p>
+                    <p class="e-number">43</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">101.0700</p>
+                    <p class="e-name">ru</p>
+                    <p class="e-number">44</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">102.9055</p>
+                    <p class="e-name">rh</p>
+                    <p class="e-number">45</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">106.4200</p>
+                    <p class="e-name">pd</p>
+                    <p class="e-number">46</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">107.8682</p>
+                    <p class="e-name">ag</p>
+                    <p class="e-number">47</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">112.4110</p>
+                    <p class="e-name">cd</p>
+                    <p class="e-number">48</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">114.8180</p>
+                    <p class="e-name">in</p>
+                    <p class="e-number">49</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">118.7100</p>
+                    <p class="e-name">sn</p>
+                    <p class="e-number">50</p>
+                </div>
+                <div class="element e-oil">
+                    <p class="e-weight">121.7600</p>
+                    <p class="e-name">sb</p>
+                    <p class="e-number">51</p>
+                </div>
+                <div class="element e-oil">
+                    <p class="e-weight">127.6000</p>
+                    <p class="e-name">te</p>
+                    <p class="e-number">52</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">126.9044</p>
+                    <p class="e-name">i</p>
+                    <p class="e-number">53</p>
+                </div>
+                <div class="element e-orange">
+                    <p class="e-weight">131.2930</p>
+                    <p class="e-name">xe</p>
+                    <p class="e-number">54</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element e-pinkish">
+                    <p class="e-weight">132.9054</p>
+                    <p class="e-name">cs</p>
+                    <p class="e-number">55</p>
+                </div>
+                <div class="element e-purple">
+                    <p class="e-weight">137.3270</p>
+                    <p class="e-name">ba</p>
+                    <p class="e-number">56</p>
+                </div>
+                <div class="element e-empty"><p class="e-name">*</p></div>
+                <div class="element e-blue">
+                    <p class="e-weight">178.4900</p>
+                    <p class="e-name">hf</p>
+                    <p class="e-number">72</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">180.9479</p>
+                    <p class="e-name">ta</p>
+                    <p class="e-number">73</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">183.8400</p>
+                    <p class="e-name">w</p>
+                    <p class="e-number">74</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">186.2070</p>
+                    <p class="e-name">re</p>
+                    <p class="e-number">75</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">190.2300</p>
+                    <p class="e-name">os</p>
+                    <p class="e-number">76</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">192.217</p>
+                    <p class="e-name">ir</p>
+                    <p class="e-number">77</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">195.0840</p>
+                    <p class="e-name">pt</p>
+                    <p class="e-number">78</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">196.9666</p>
+                    <p class="e-name">au</p>
+                    <p class="e-number">79</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">200.5900</p>
+                    <p class="e-name">hg</p>
+                    <p class="e-number">80</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">204.3833</p>
+                    <p class="e-name">tl</p>
+                    <p class="e-number">81</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">207.2000</p>
+                    <p class="e-name">pb</p>
+                    <p class="e-number">82</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">208.9803</p>
+                    <p class="e-name">bi</p>
+                    <p class="e-number">83</p>
+                </div>
+                <div class="element e-oil">
+                    <p class="e-weight">208.9824</p>
+                    <p class="e-name">po</p>
+                    <p class="e-number">84</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">209.9871</p>
+                    <p class="e-name">at</p>
+                    <p class="e-number">85</p>
+                </div>
+                <div class="element e-orange">
+                    <p class="e-weight">222.0176</p>
+                    <p class="e-name">rn</p>
+                    <p class="e-number">86</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element"><p class="e-name">1</p></div>
+                <div class="element e-pinkish">
+                    <p class="e-weight">223</p>
+                    <p class="e-name">fr</p>
+                    <p class="e-number">87</p>
+                </div>
+                <div class="element e-purple">
+                    <p class="e-weight">226</p>
+                    <p class="e-name">ra</p>
+                    <p class="e-number">88</p>
+                </div>
+                <div class="element e-empty"><p class="e-name">**</p></div>
+                <div class="element e-blue">
+                    <p class="e-weight">267</p>
+                    <p class="e-name">rf</p>
+                    <p class="e-number">104</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">268</p>
+                    <p class="e-name">db</p>
+                    <p class="e-number">105</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">269</p>
+                    <p class="e-name">sg</p>
+                    <p class="e-number">106</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">270</p>
+                    <p class="e-name">bh</p>
+                    <p class="e-number">107</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">269</p>
+                    <p class="e-name">Hs</p>
+                    <p class="e-number">108</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">278</p>
+                    <p class="e-name">mt</p>
+                    <p class="e-number">109</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">281</p>
+                    <p class="e-name">ds</p>
+                    <p class="e-number">110</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">282</p>
+                    <p class="e-name">rg</p>
+                    <p class="e-number">111</p>
+                </div>
+                <div class="element e-blue">
+                    <p class="e-weight">285</p>
+                    <p class="e-name">cn</p>
+                    <p class="e-number">112</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">286</p>
+                    <p class="e-name">nh</p>
+                    <p class="e-number">113</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">289</p>
+                    <p class="e-name">fl</p>
+                    <p class="e-number">114</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">290</p>
+                    <p class="e-name">mc</p>
+                    <p class="e-number">115</p>
+                </div>
+                <div class="element e-green">
+                    <p class="e-weight">293</p>
+                    <p class="e-name">lv</p>
+                    <p class="e-number">116</p>
+                </div>
+                <div class="element e-yellow">
+                    <p class="e-weight">294</p>
+                    <p class="e-name">ts</p>
+                    <p class="e-number">117</p>
+                </div>
+                <div class="element e-orange">
+                    <p class="e-weight">294</p>
+                    <p class="e-name">og</p>
+                    <p class="e-number">118</p>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="line">
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"><p class="e-name">*</p></div>
+                <div class="element e-cyan">
+                    <p class="e-weight">138.9054</p>
+                    <p class="e-name">la</p>
+                    <p class="e-number">57</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">140.1160</p>
+                    <p class="e-name">ce</p>
+                    <p class="e-number">58</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">140.9076</p>
+                    <p class="e-name">pr</p>
+                    <p class="e-number">59</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">144.2420</p>
+                    <p class="e-name">nd</p>
+                    <p class="e-number">60</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">145</p>
+                    <p class="e-name">pm</p>
+                    <p class="e-number">61</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">150.3600</p>
+                    <p class="e-name">sm</p>
+                    <p class="e-number">62</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">151.9640</p>
+                    <p class="e-name">eu</p>
+                    <p class="e-number">63</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">157.2500</p>
+                    <p class="e-name">gd</p>
+                    <p class="e-number">64</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">158.9253</p>
+                    <p class="e-name">tb</p>
+                    <p class="e-number">65</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">162.5000</p>
+                    <p class="e-name">dy</p>
+                    <p class="e-number">66</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">164.9303</p>
+                    <p class="e-name">ho</p>
+                    <p class="e-number">67</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">167.2590</p>
+                    <p class="e-name">er</p>
+                    <p class="e-number">68</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">168.9342</p>
+                    <p class="e-name">tm</p>
+                    <p class="e-number">69</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">173.0540</p>
+                    <p class="e-name">yb</p>
+                    <p class="e-number">70</p>
+                </div>
+                <div class="element e-cyan">
+                    <p class="e-weight">174.9668</p>
+                    <p class="e-name">lu</p>
+                    <p class="e-number">71</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"><p class="e-name">**</p></div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">227</p>
+                    <p class="e-name">ac</p>
+                    <p class="e-number">89</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">232.0381</p>
+                    <p class="e-name">th</p>
+                    <p class="e-number">90</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">231.0359</p>
+                    <p class="e-name">pa</p>
+                    <p class="e-number">91</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">238.0289</p>
+                    <p class="e-name">u</p>
+                    <p class="e-number">92</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">237</p>
+                    <p class="e-name">np</p>
+                    <p class="e-number">93</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">244</p>
+                    <p class="e-name">pu</p>
+                    <p class="e-number">94</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">243</p>
+                    <p class="e-name">am</p>
+                    <p class="e-number">95</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">247</p>
+                    <p class="e-name">cm</p>
+                    <p class="e-number">96</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">247</p>
+                    <p class="e-name">bk</p>
+                    <p class="e-number">97</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">251</p>
+                    <p class="e-name">cf</p>
+                    <p class="e-number">98</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">252</p>
+                    <p class="e-name">es</p>
+                    <p class="e-number">99</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">257</p>
+                    <p class="e-name">fm</p>
+                    <p class="e-number">100</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">258</p>
+                    <p class="e-name">md</p>
+                    <p class="e-number">101</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">259</p>
+                    <p class="e-name">no</p>
+                    <p class="e-number">102</p>
+                </div>
+                <div class="element e-turquoise">
+                    <p class="e-weight">262</p>
+                    <p class="e-name">lr</p>
+                    <p class="e-number">103</p>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="line" style="margin-bottom: -40px">
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element type" style="width: 820px">
+                    <p class="e-type">Metal</p>
+                </div>
+                <div class="element type e-oil" style="height: 65px; margin-bottom: 0px">
+                    <p class="e-type" style="margin-top: 25px">Metalloid</p>
+                </div>
+                <div class="element type" style="width: 220px">
+                    <p class="e-type">Nonmetal</p>
+                </div>
+            </div>
+            <div class="line">
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element e-empty"></div>
+                <div class="element type e-pinkish" style="width: 145px">
+                    <p class="e-type">Alkali metal</p>
+                </div>
+                <div class="element type e-purple" style="width: 145px">
+                    <p class="e-type">Alkaline earth metal</p>
+                </div>
+                <div class="element type e-cyan" style="width: 145px">
+                    <p class="e-type">Lanthanide</p>
+                </div>
+                <div class="element type e-turquoise" style="width: 70px">
+                    <p class="e-type">Actinide</p>
+                </div>
+                <div class="element type e-blue" style="width: 145px">
+                    <p class="e-type">Transition metal</p>
+                </div>
+                <div class="element type e-green" style="width: 145px">
+                    <p class="e-type">Post-transition metal</p>
+                </div>
+                <div class="element e-empty"></div>
+                <div class="element type e-yellow" style="width: 145px">
+                    <p class="e-type">Reactive nonmetal</p>
+                </div>
+                <div class="element type e-orange" style="">
+                    <p class="e-type">Noble gas</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
