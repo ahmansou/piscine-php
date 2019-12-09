@@ -1,0 +1,103 @@
+body {
+    background-color: #505050;
+}
+
+header {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 130px;
+    background-color: #909090;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px black;
+}
+
+.logo {
+    position: absolute;
+    top: 10%;
+    height: 80%;
+} 
+
+.close, .reload {
+    position: absolute;
+    width: 20px;
+    right: 10px;
+}
+
+.close {
+    bottom: 10px;
+}
+.reload {
+    top: 10px;
+}
+
+.loupe {
+    position: absolute;
+    right: 30px;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+.l-sidebar {
+    padding-top: 8px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    left: 2%;
+    background-color: #909090;
+    width: 12%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px black;
+}
+
+.l-sidebar img{
+    width: 70px;
+}
+
+.active {
+    border: solid 5px red;
+    border-radius: 8px;
+}
+
+.c-body {
+    padding: 8px;
+    position: relative;
+    top: 20px;
+    left: 4%;
+    background-color: #909090;
+    width: 66%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px black;
+}
+.c-body img {
+    width: 100%;
+}
+
+.r-sidebar {
+    padding-top: 8px;
+    text-align: center;
+    position: relative;
+    position: relative;
+    top: 20px;
+    left: 6%;
+    background-color: #909090;
+    width: 12%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px black;
+}
+
+.brick {
+    margin: -2px;
+}
+
+.r-sidebar img{
+    width: 70px;
+}
