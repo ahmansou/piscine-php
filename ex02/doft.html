@@ -6,33 +6,45 @@
         <link rel="stylesheet" href="doft.css">
     </head>
     <body>
-        <header>
-            <img class="logo" src="resources/day_of_the_42.png"/>
-            <img class="loupe" src="resources/loupe.png"/>
-            <img class="reload" src="resources/reload.png"/>
-            <img class="close" src="resources/close.gif"/>
+        <div class="green-box">
+            <p>Vous <span id="entrez">entrez</span> alors dans une grande piece remplie <br/>
+            d' <span id="pc">ordinateurs</span>...<br/>
+            <span id="bjr">- Bonjour, vous êtes nouveau ici ?</span></p>
+            <form>
+                <input id="textbox" type="text" title="Your message here">
+                <button id="button" title="Click me >:(">Repondre</button>
+            </form>
+        </div>
+        <header >
+            <img class="logo" src="resources/day_of_the_42.png" title="You know who i am, I'm the LOGO"/>
+            <img class="loupe" src="resources/loupe.png" title="Loop"/>
+            <a href="https://www.disney.com/"><img class="reload" src="resources/reload.png" title="Start from the beginning"/></a>
+            <a href="https://www.relaischateaux.com/"><img class="close" src="resources/close.gif" title="Disconnect"/></a>
         </header>
-        <div class="wrapper">
+        <div class="wrapper" >
             <div class="l-sidebar">
-                <img src="resources/arrow.png"/>
+                <img src="resources/arrow.png" alt="Advance" title="Advance"/>
                 <br/>
-                <img src="resources/main.png"/>
+                <img src="resources/main.png" alt="Take" title="Take"/>
                 <br/>
-                <img class="active" src="resources/oeil.png"/>
+                <img class="active" src="resources/oeil.png" alt="Look" title="Look"/>
                 <br/>
-                <img src="resources/outil.png"/>
+                <img src="resources/outil.png" alt="Use" title="Use"/>
                 <br/>
-                <img src="resources/chat-icon.png"/>
+                <img src="resources/chat-icon.png" alt="Speak" title="Speak"/>
             </div>
             <div class="c-body">
-                <img src="resources/cluster.jpg"/>        
+                <img src="resources/cluster.jpg" title="Cluster" alt="Cluster" usemap="#map"/>
+                <map name="map">
+                    <area shape="poly" alt="Chair" title="Chair" href="http://www.ikea.com" coords="1538,1028,1655,1042,1685,1132,1701,1155,1778,1135,1788,1205,1751,1249,1671,1285,1581,1252,1584,1138">
+                </map>
             </div>
             <div class="r-sidebar">
-                <img src="resources/book.png"/>
+                <img src="resources/book.png" title="Book"/>
                 <br/>
-                <img src="resources/towel.png"/>
+                <img src="resources/towel.png" title="Looks like jeans but is towel ¯\_(ツ)_/¯"/>
                 <br/>
-				<div class="brick"></div>
+				<div class="brick" title="Brick walls"></div>
             </div>
         </div>
     </body>
