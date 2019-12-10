@@ -1,4 +1,5 @@
 body {
+    width: ;
     background-color: #505050;
 }
 
@@ -16,9 +17,10 @@ header {
     position: absolute;
     top: 10%;
     height: 80%;
-} 
+}
 
-.close, .reload {
+.close,
+.reload {
     position: absolute;
     width: 20px;
     right: 10px;
@@ -27,6 +29,7 @@ header {
 .close {
     bottom: 10px;
 }
+
 .reload {
     top: 10px;
 }
@@ -56,7 +59,7 @@ header {
     box-shadow: 10px 10px 10px 0px black;
 }
 
-.l-sidebar img{
+.l-sidebar img {
     width: 70px;
 }
 
@@ -76,12 +79,13 @@ header {
     border-radius: 10px;
     box-shadow: 10px 10px 10px 0px black;
 }
+
 .c-body img {
     width: 100%;
 }
 
 .r-sidebar {
-    padding-top: 8px;
+    padding: 8px;
     text-align: center;
     position: relative;
     position: relative;
@@ -95,9 +99,12 @@ header {
 }
 
 .brick {
-    margin: -2px;
+    height: 70px;
+    width: 120px;
+    background-image: url(resources/brick.jpg);
+    background-repeat: repeat;
 }
 
-.r-sidebar img{
+.r-sidebar img {
     width: 70px;
 }
