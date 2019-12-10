@@ -34,9 +34,13 @@
                 <img src="resources/chat-icon.png" alt="Speak" title="Speak"/>
             </div>
             <div class="c-body">
-                <img src="resources/cluster.jpg" title="Cluster" alt="Cluster" usemap="#map"/>
-                <map name="map">
-                    <area shape="poly" alt="Chair" title="Chair" href="http://www.ikea.com" coords="1538,1028,1655,1042,1685,1132,1701,1155,1778,1135,1788,1205,1751,1249,1671,1285,1581,1252,1584,1138">
+                <img id="main_image" src="resources/cluster.jpg"
+                alt="Cluster" title="Cluster"
+                usemap="#clustermap">
+                <map name="clustermap">
+                    <area href="https://www.ikea.com/" alt="Ikea Chair" title="Ikea Chair" coords="246, 247, 270, 252, 300, 260, 310, 300, 340, 290, 340, 318, 330, 341, 300, 350, 350, 380, 330, 410, 251, 412, 262, 370, 290, 366, 263, 330" shape="poly">
+                    <area shape="poly" href="https://www.apple.com/" alt="Ikea Chair" title="Ikea Chair"
+                    coords="600,240,610,325,640,330,645,360,690,370,690,340,740,350,740,250" href="">
                 </map>
             </div>
             <div class="r-sidebar">
@@ -46,18 +50,5 @@
                 <br/>
 				<div class="brick" title="Brick walls"></div>
             </div>
-            <div class="main">
-                <img id="main_image" src="resources/cluster.jpg"
-                alt="Just a normal day at 42" title="Just a normal day at 42"
-                usemap="#clustermap">
-                <map name="clustermap">
-                <area shape="poly"
-                coords="325,325,340,390,340,440,390,455,410,460,450,415,445,385,400,395,395,345,325,325"
-                href="http://www.ikea.com" alt="Buy the chair!" title="Buy the same chair!">
-                <area shape="poly"
-                coords="790,315,790,425,850,440,845,465,905,480,910,465,900,460,900,450,975,460,980,330,790,315"
-                href="http://www.apple.com" alt="Buy that iMac!" title="Buy that iMac">
-            </map>
-        </div>
     </body>
 </html>
