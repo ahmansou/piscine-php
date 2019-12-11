@@ -2,19 +2,48 @@
 <?php
 if ($argc == 2)
 {
-    $par = preg_split("/ +/", trim($argv[1]));
-    if ($op == '+')
-        echo $x + $y;
-    else if ($op == '-')
-        echo $x - $y;
-    else if ($op == '*')
-        echo $x * $y;
-    else if (($op == '/' || $op == '%') && $y == 0)
-        echo "You can't devide on 0";
-    else if ($op == '/')
-        echo $x / $y;
-    else if ($op == '%')
-        echo $x % $y;
+    $oper = array("+", "-", "*", "/", "%");
+    $par = preg_replace("/ +/", "", trim($argv[1]));
+    $isop = 0;
+    foreach ($oper as $ope)
+        if (strstr($par, $ope))
+            $isop = 1;
+    if ($isop == 1)
+    {
+        foreach ($oper as $ope)
+        {
+            if (strstr($par, $ope))
+            {
+                if (substr_count($par, $ope) > 1)
+                {
+                    echo "Syntax Error";
+                    break;
+                }
+                $arr = explode($ope, $par);
+                $op = $ope;
+                $x = $arr[0];
+                $y = $arr[1];
+                if (!is_numeric($x) || !is_numeric($y))
+                {
+                    echo "Syntax Error";
+                    break;
+                }
+                if ($op == '+')
+                    echo $x + $y;
+                else if ($op == '-')
+                    echo $x - $y;
+                else if ($op == '*')
+                    echo $x * $y;
+                else if ($op == '/')
+                    echo $x / $y;
+                else if ($op == '%')
+                    echo $x % $y;
+                break;
+            }
+        }
+    }
+    else
+        echo "Syntax Error";
 }
 else
     echo "Incorrect Parameters";
