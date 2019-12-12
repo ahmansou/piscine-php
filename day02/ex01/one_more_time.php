@@ -1,5 +1,6 @@
 #!/usr/bin/php
 <?php
+date_default_timezone_set("Europe/Paris");
 if ($argc == 2)
 {
     $days = array("lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche");
@@ -23,7 +24,7 @@ if ($argc == 2)
         $h = $hour[0];
         $m = $hour[1];
         $s = $hour[2];
-        if (strlen($h) != 2 || strlen($m) != 2 || strlen($s) != 2 ||
+        if (substr_count($date[4], ":") != 2 || strlen($h) != 2 || strlen($m) != 2 || strlen($s) != 2 ||
             $h > 24 || $m > 60 || $s > 60)
         {
             echo "Wrong Format";
